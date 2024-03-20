@@ -9,4 +9,34 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>NTT_HomeServlet</display-name>
+    <servlet-name>NTT_HomeServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_HomeServlet</servlet-name>
+    <url-pattern>/NTT_HomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_TrendingServlet</display-name>
+    <servlet-name>NTT_TrendingServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_TrendingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_TrendingServlet</servlet-name>
+    <url-pattern>/NTT_TrendingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_MoveListServlet</display-name>
+    <servlet-name>NTT_MoveListServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_MoveListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_MoveListServlet</servlet-name>
+    <url-pattern>/NTT_MoveListServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -39,4 +39,34 @@
     <servlet-name>NTT_MoveListServlet</servlet-name>
     <url-pattern>/NTT_MoveListServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_MovieSingleServlet</display-name>
+    <servlet-name>NTT_MovieSingleServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_MovieSingleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_MovieSingleServlet</servlet-name>
+    <url-pattern>/NTT_MovieSingleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_VideoPlayServlet</display-name>
+    <servlet-name>NTT_VideoPlayServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_VideoPlayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_VideoPlayServlet</servlet-name>
+    <url-pattern>/NTT_VideoPlayServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_ProfileServlet</display-name>
+    <servlet-name>NTT_ProfileServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_ProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_ProfileServlet</servlet-name>
+    <url-pattern>/NTT_ProfileServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

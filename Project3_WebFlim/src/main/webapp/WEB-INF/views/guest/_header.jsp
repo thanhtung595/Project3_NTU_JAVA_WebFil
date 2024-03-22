@@ -94,7 +94,7 @@
 							<span></span>
 						</div>
 				    </div>
-				    <a href="#"><img class="logo" src="images/logo1.png" alt="" width="119" height="58"></a>
+				    <a href=""><img class="logo" src="images/logo1.png" alt="" width="119" height="58"></a>
 			    </div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
@@ -119,6 +119,9 @@
 					</ul>
 					<ul class="nav navbar-nav flex-child-menu menu-right">               
 						<li><a href="#">Help</a></li>
+						<li><a href="#">Nạp tiền</a></li>
+						<li><a href="profile">Profile</a></li>
+						<li><p style="font-weight: bold;">$580</p></li>
 						<li class="loginLink"><a href="#">LOG In</a></li>
 						<li class="btn signupLink"><a href="#">sign up</a></li>
 					</ul>

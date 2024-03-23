@@ -6,7 +6,15 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import NguyenThanhTung_Beans.Flim;
+import NguyenThanhTung_Utils.*;
+import NguyenThanhTung_Conn.NguyenThanhTungConnection;
 
 /**
  * Servlet implementation class NTT_MoveListServlet
@@ -27,9 +35,38 @@ public class NTT_MoveListServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getServletContext()
-				.getRequestDispatcher("/WEB-INF/views/guest/moveList.jsp");
-		dispatcher.forward(request, response);
+		Connection conn = null;
+		String errorString = null;
+		String successString = "Ok roi";
+		List<Flim> list = null;
+		try {
+			conn = NguyenThanhTungConnection.getMSSQLConnection();
+			try {
+				list = FlimUtils.getListFlim(conn);
+			} catch (Exception e) {
+				e.printStackTrace();
+				errorString = e.getMessage();
+			}
+			
+			request.setAttribute("errorString", errorString);
+			for (Flim flim : list) {
+				successString = flim.getNameFlim();
+			}
+			request.setAttribute("successString", successString);
+			request.setAttribute("flimList", list);
+			
+			RequestDispatcher dispatcher = request.getServletContext()
+					.getRequestDispatcher("/WEB-INF/views/guest/moveList.jsp");
+			dispatcher.forward(request, response);
+		} catch (ClassNotFoundException| SQLException e1) {
+			e1.printStackTrace();
+			errorString = e1.getMessage();
+			
+			RequestDispatcher dispatcher = request.getServletContext()
+					.getRequestDispatcher("/WEB-INF/views/guest/moveList.jsp");
+			request.setAttribute("errorString", errorString);
+			dispatcher.forward(request, response);
+		}
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,10 +64,28 @@
 							<option value="date">Release date Descending</option>
 							<option value="date">Release date Ascending</option>
 						</select> <a href="trending" class="list"><i
-							class="ion-ios-list-outline "></i></a> <a href="#"
-							class="grid"><i class="ion-grid active"></i></a>
+							class="ion-ios-list-outline "></i></a> <a href="#" class="grid"><i
+							class="ion-grid active"></i></a>
 					</div>
 					<div class="flex-wrap-movielist mv-grid-fw">
+						<c:forEach items="${flimList}" var="flim">
+							<div class="movie-item-style-2 movie-item-style-1">
+								<img style="height: 260px" src="images/flim/${flim.baner }" alt="">
+								<div class="hvr-inner">
+									<a href="moviesingle?nameFlim=${flim.nameFlim}"> Watch <i
+										class="ion-android-arrow-dropright"></i>
+									</a>
+								</div>
+								<div class="mv-item-infor">
+									<h6>
+										<a href="moviesingle?nameFlim=${flim.nameFlim}">${flim.nameFlim }</a>
+									</h6>
+									<p class="rate">
+										<i class="ion-android-star"></i><span>8.1</span> /10
+									</p>
+								</div>
+							</div>
+						</c:forEach>
 						<div class="movie-item-style-2 movie-item-style-1">
 							<img src="images/uploads/mv1.jpg" alt="">
 							<div class="hvr-inner">

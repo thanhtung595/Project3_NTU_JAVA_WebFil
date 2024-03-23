@@ -982,7 +982,7 @@
 			<div class="col-md-4">
 				<div class="sidebar">
 					<div class="ads">
-						<img src="images/film/daophopiano.jpg" alt="" width="336" height="296">
+						<img src="images/flim/daophopiano.jpg" alt="" width="336" height="296">
 					</div>
 					<div class="celebrities">
 						<h4 class="sb-title">Performer</h4>

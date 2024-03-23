@@ -1,5 +1,7 @@
+<%@page import="NguyenThanhTung_Beans.Flim"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 
 <head>
@@ -52,7 +54,7 @@
 			<div class="row ipad-width2">
 				<div class="col-md-4 col-sm-12 col-xs-12">
 					<div class="movie-img sticky-sb">
-						<img src="images/uploads/movie-single.jpg" alt="">
+						<img src="images/flim/${flim.baner }" alt="">
 						<div class="movie-btn">
 							<div class="btn-transform transform-vertical red">
 								<div id="video-play">
@@ -70,7 +72,20 @@
 								</div>
 								<div>
 									<button class="item item-2 yellowbtn">
-										<i class="ion-card"> 8$</i>
+										<%
+										Flim flimv = (Flim) request.getAttribute("flim"); // Đảm bảo sử dụng tên thuộc tính được đặt trong servlet
+
+										// Kiểm tra nếu freeFlim bằng 0
+										if (flimv != null && flimv.getFreeFlim() == false) {
+										%>
+										<i class="ion-card"> Free</i>
+										<%
+										} else {
+										%>
+										<i class="ion-card"> ${flim.priceFlim }</i>
+										<%
+										}
+										%>
 									</button>
 
 								</div>
@@ -79,7 +94,7 @@
 					</div>
 				</div>
 
-
+				<i class="ion-card"> 8$</i>
 				<div class="popup" id="popup">
 					<div class="popup-content">
 						<span class="close-btn" id="close-btn">&times;</span>
@@ -115,9 +130,7 @@
 
 				<div class="col-md-8 col-sm-12 col-xs-12">
 					<div class="movie-single-ct main-content">
-						<h1 class="bd-hd">
-							Skyfall: Quantum of Spectre <span>2015</span>
-						</h1>
+						<h1 class="bd-hd">${flim.nameFlim }</h1>
 						<div class="social-btn">
 							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add
 								to Favorite</a>
@@ -163,12 +176,9 @@
 									<div id="overview" class="tab active">
 										<div class="row">
 											<div class="col-md-8 col-sm-12 col-xs-12">
-												<p>Tony Stark creates the Ultron Program to protect the
-													world, but when the peacekeeping program becomes hostile,
-													The Avengers go into action to try and defeat a virtually
-													impossible enemy together. Earth's mightiest heroes must
-													come together once again to protect the world from global
-													extinction.</p>
+												<p>${flim.gioiThieu }</p>
+												<br />
+												<p>${flim.moTa }</p>
 												<div class="title-hd-sm">
 													<h4>Videos & Photos</h4>
 													<a href="#" class="time">All 5 Videos & 245 Photos <i
@@ -291,19 +301,19 @@
 											</div>
 											<div class="col-md-4 col-xs-12 col-sm-12">
 												<div class="sb-it">
-													<h6>Director:</h6>
+													<h6>Hãng sản xuất:</h6>
 													<p>
-														<a href="#">Joss Whedon</a>
+														<a href="#">${flim.hangSX }</a>
 													</p>
 												</div>
 												<div class="sb-it">
-													<h6>Writer:</h6>
+													<h6>Đạo diễn:</h6>
 													<p>
 														<a href="#">Joss Whedon,</a> <a href="#">Stan Lee</a>
 													</p>
 												</div>
 												<div class="sb-it">
-													<h6>Stars:</h6>
+													<h6>Diễn viên:</h6>
 													<p>
 														<a href="#">Robert Downey Jr,</a> <a href="#">Chris
 															Evans,</a> <a href="#">Mark Ruffalo,</a><a href="#">
@@ -311,23 +321,20 @@
 													</p>
 												</div>
 												<div class="sb-it">
-													<h6>Genres:</h6>
+													<h6>Thể loại:</h6>
 													<p>
-														<a href="#">Action, </a> <a href="#"> Sci-Fi,</a> <a
-															href="#">Adventure</a>
+														<c:forEach items="${theLoai}" var="theLoai">
+															<a href="#">${theLoai.nameTheLoai}, </a>
+														</c:forEach>
 													</p>
 												</div>
 												<div class="sb-it">
-													<h6>Release Date:</h6>
-													<p>May 1, 2015 (U.S.A)</p>
+													<h6>Ngày phát hành</h6>
+													<p>${flim.ngayPhatHanh }</p>
 												</div>
 												<div class="sb-it">
-													<h6>Run Time:</h6>
-													<p>141 min</p>
-												</div>
-												<div class="sb-it">
-													<h6>MMPA Rating:</h6>
-													<p>PG-13</p>
+													<h6>Thời gian phim:</h6>
+													<p>${flim.thoiGianFlim }</p>
 												</div>
 												<div class="sb-it">
 													<h6>Plot Keywords:</h6>

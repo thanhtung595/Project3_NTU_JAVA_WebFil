@@ -5,18 +5,17 @@
     <div class="login-content">
         <a href="#" class="close">x</a>
         <h3>Login</h3>
-        <form method="post" action="#">
+        <form id="loginForm">
         	<div class="row">
         		 <label for="username">
                     Username:
-                    <input type="text" name="username" id="username" placeholder="User Name or Email" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                    <input type="text" name="username" id="username" required="required" />
                 </label>
         	</div>
-           
             <div class="row">
             	<label for="password">
                     Password:
-                    <input type="password" name="password" id="password" placeholder="******" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                    <input type="password" name="password" id="password" required="required" />
                 </label>
             </div>
             <div class="row">
@@ -29,6 +28,7 @@
             </div>
            <div class="row">
            	 <button type="submit">Login</button>
+           	 <p id="errorlogin"></p>
            </div>
         </form>
         <div class="row">
@@ -46,32 +46,45 @@
     <div class="login-content">
         <a href="#" class="close">x</a>
         <h3>sign up</h3>
-        <form method="post" action="#">
+        <form  id="singupForm" method="post" action="#">
             <div class="row">
                  <label for="username-2">
                     Username:
-                    <input type="text" name="username" id="username-2" placeholder="User Name or Email" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                    <input type="text" name="username" id="username-2" placeholder="User Name or Email" required="required" />
                 </label>
             </div>
            
             <div class="row">
                 <label for="email-2">
                     your email:
-                    <input type="password" name="email" id="email-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                    <input type="text" name="email" id="email-2" placeholder="" required="required" />
+                </label>
+            </div>
+            <div class="row">
+                <label for="lastname">
+                    your last name:
+                    <input type="text" name="lastname" id="lastname" placeholder="" required="required" />
+                </label>
+            </div>
+            <div class="row">
+                <label for="fistname">
+                    your fist name:
+                    <input type="text" name="fistname" id="fistname" placeholder="" required="required" />
                 </label>
             </div>
              <div class="row">
                 <label for="password-2">
                     Password:
-                    <input type="password" name="password" id="password-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                    <input type="password" name="password" id="password-2" placeholder="" required="required" />
                 </label>
             </div>
              <div class="row">
                 <label for="repassword-2">
                     re-type Password:
-                    <input type="password" name="password" id="repassword-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                    <input type="password" name="password" id="repassword-2" placeholder=""required="required" />
                 </label>
             </div>
+            <p id="errorSignup"></p>
            <div class="row">
              <button type="submit">sign up</button>
            </div>
@@ -119,11 +132,12 @@
 					</ul>
 					<ul class="nav navbar-nav flex-child-menu menu-right">               
 						<li><a href="#">Help</a></li>
-						<li><a href="#">Nạp tiền</a></li>
-						<li><a href="profile">Profile</a></li>
-						<li><p style="font-weight: bold;">$580</p></li>
-						<li class="loginLink"><a href="#">LOG In</a></li>
-						<li class="btn signupLink"><a href="#">sign up</a></li>
+						<li id="naptien"><a href="#">Nạp tiền</a></li>
+						<li id="profile" style="display: none;"><a href="profile">Profile</a></li>
+						<li id="priceaccount" style="display: none;"><p id="txtpriceaccount" style="font-weight: bold;">$580</p></li>
+						<li id="logoutbtn" style="display: none;margin-left: 15px" class="btn"><a href="#">log out</a></li>
+						<li id="loginbtn"  class="loginLink"><a href="#">LOG In</a></li>
+						<li id="signupbtn" class="btn signupLink"><a href="#">sign up</a></li>
 					</ul>
 				</div>
 			<!-- /.navbar-collapse -->

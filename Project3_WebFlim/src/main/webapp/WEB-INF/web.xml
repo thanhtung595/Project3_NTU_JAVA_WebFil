@@ -69,4 +69,44 @@
     <servlet-name>NTT_ProfileServlet</servlet-name>
     <url-pattern>/NTT_ProfileServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_Login</display-name>
+    <servlet-name>NTT_Login</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_Login</servlet-name>
+    <url-pattern>/NTT_Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_LoginServlet</display-name>
+    <servlet-name>NTT_LoginServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_LoginServlet</servlet-name>
+    <url-pattern>/NTT_LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_SignupServlet</display-name>
+    <servlet-name>NTT_SignupServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_SignupServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_SignupServlet</servlet-name>
+    <url-pattern>/NTT_SignupServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ErrorPage</display-name>
+    <servlet-name>ErrorPage</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.ErrorPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ErrorPage</servlet-name>
+    <url-pattern>/ErrorPage</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -55,7 +55,7 @@
 			<div class="col-md-3 col-sm-12 col-xs-12">
 				<div class="user-information">
 					<div class="user-img">
-						<a href="#"><img src="images/uploads/user-img.png" alt=""><br></a>
+						<a href="#"><img src="images/imguser/nguyenthanhtung.jpg" alt=""><br></a>
 						<a href="#" class="redbtn">Change avatar</a>
 					</div>
 					<div class="user-fav">
@@ -100,27 +100,7 @@
 								<input type="text" placeholder="Kennedy">
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-6 form-it">
-								<label>Country</label>
-								<select>
-								  <option value="united">United States</option>
-								  <option value="saab">Others</option>
-								</select>
-							</div>
-							<div class="col-md-6 form-it">
-								<label>State</label>
-								<select>
-								  <option value="united">New York</option>
-								  <option value="saab">Others</option>
-								</select>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-2">
-								<input class="submit" type="submit" value="save">
-							</div>
-						</div>	
+						
 					</form>
 					<form action="#" class="password">
 						<h4>02. Change password</h4>
@@ -159,5 +139,7 @@
 <script src="js/plugins.js"></script>
 <script src="js/plugins2.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/cookieuser.js"></script>
+<script src="js/profile.js"></script>
 </body>
 </html>

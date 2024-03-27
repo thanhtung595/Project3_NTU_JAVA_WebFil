@@ -109,4 +109,14 @@
     <servlet-name>ErrorPage</servlet-name>
     <url-pattern>/ErrorPage</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_UpdateProfileServlet</display-name>
+    <servlet-name>NTT_UpdateProfileServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet.NTT_UpdateProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_UpdateProfileServlet</servlet-name>
+    <url-pattern>/NTT_UpdateProfileServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

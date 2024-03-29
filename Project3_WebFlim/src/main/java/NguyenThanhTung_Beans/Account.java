@@ -17,6 +17,8 @@ public class Account {
 	private float priceAccount;
 	private Date timeCreate;
 	
+	private String nameRole;
+	
 	public Account() {
 		// TODO Auto-generated constructor stub
 	}
@@ -38,6 +40,36 @@ public class Account {
 		this.idRole = idRole;
 		this.priceAccount = priceAccount;
 		this.timeCreate = timeCreate;
+	}
+
+	
+	
+	public Account(int idAccount, String userName, String userPassword, String email, String fistName, String lastName,
+			int idCountry, int idState, boolean isDelete, boolean isBan, int idRole, float priceAccount,
+			Date timeCreate, String nameRole) {
+		super();
+		this.idAccount = idAccount;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.email = email;
+		this.fistName = fistName;
+		this.lastName = lastName;
+		this.idCountry = idCountry;
+		this.idState = idState;
+		this.isDelete = isDelete;
+		this.isBan = isBan;
+		this.idRole = idRole;
+		this.priceAccount = priceAccount;
+		this.timeCreate = timeCreate;
+		this.nameRole = nameRole;
+	}
+ 
+	public String getNameRole() {
+		return nameRole;
+	}
+
+	public void setNameRole(String nameRole) {
+		this.nameRole = nameRole;
 	}
 
 	public int getIdAccount() {

@@ -119,4 +119,54 @@
     <servlet-name>NTT_UpdateProfileServlet</servlet-name>
     <url-pattern>/NTT_UpdateProfileServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_AdminHomeServlet</display-name>
+    <servlet-name>NTT_AdminHomeServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet_Area.NTT_AdminHomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_AdminHomeServlet</servlet-name>
+    <url-pattern>/NTT_AdminHomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_AdminAccountServlet</display-name>
+    <servlet-name>NTT_AdminAccountServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet_Area.NTT_AdminAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_AdminAccountServlet</servlet-name>
+    <url-pattern>/NTT_AdminAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_AdminFlimServlet</display-name>
+    <servlet-name>NTT_AdminFlimServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet_Area.NTT_AdminFlimServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_AdminFlimServlet</servlet-name>
+    <url-pattern>/NTT_AdminFlimServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_AdminDanhSachNapTienServlet</display-name>
+    <servlet-name>NTT_AdminDanhSachNapTienServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet_Area.NTT_AdminDanhSachNapTienServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_AdminDanhSachNapTienServlet</servlet-name>
+    <url-pattern>/NTT_AdminDanhSachNapTienServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NTT_AdminDanhFlimMuaServlet</display-name>
+    <servlet-name>NTT_AdminDanhFlimMuaServlet</servlet-name>
+    <servlet-class>NguyenThanhTung_Servlet_Area.NTT_AdminDanhFlimMuaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NTT_AdminDanhFlimMuaServlet</servlet-name>
+    <url-pattern>/NTT_AdminDanhFlimMuaServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

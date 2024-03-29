@@ -31,12 +31,8 @@ public class FlimUtils {
 			String baner = rs.getString("baner");
 			String videoMP4 = rs.getString("videoMP4");
 			String moTa = rs.getString("moTa");
-
-			// Tạo đối tượng Book và gán các giá trị từ ResultSet và đối tượng Category vào
 			Flim flim = new Flim(idFlim, nameFlim, freeFlim, priceFlim, isDelete, hangSX, gioiThieu, ngayPhatHanh,
 					thoiGianFlim, baner, videoMP4, moTa);
-
-			// Thêm đối tượng Book vào danh sách
 			list.add(flim);
 		}
 		return list;

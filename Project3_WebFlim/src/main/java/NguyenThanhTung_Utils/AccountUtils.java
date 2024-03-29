@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 import NguyenThanhTung_Beans.Account;
 
@@ -36,6 +38,37 @@ public class AccountUtils {
 			pstm.setDate(12, currentSqlDate);
 			pstm.executeUpdate();
 		}
+		
+		public static List<Account> getAll(Connection conn) throws SQLException {
+		    String sql = "SELECT a.idAccount, a.userName, a.userPassword, a.email, a.fistName, a.lastName,a.idCountry,a.idState,a.isDelete,a.isBan,a.idRole,a.priceAccount,a.timeCreate ,r.idRole, r.nameRole " +
+		                 "FROM Account a " +
+		                 "INNER JOIN Role r ON a.idRole = r.idRole";
+		    PreparedStatement pstm = conn.prepareStatement(sql);
+		    ResultSet resultSet = pstm.executeQuery();
+		    List<Account> list = new ArrayList<>();
+		    while (resultSet.next()) {
+		    	int idAccount = resultSet.getInt("idAccount");
+		    	 String userName = resultSet.getString("userName");
+                String userPassword = resultSet.getString("userPassword");
+                String email = resultSet.getString("email");
+                String fistName = resultSet.getString("fistName");
+                String lastName = resultSet.getString("lastName");
+                int idCountry = resultSet.getInt("idCountry");
+                int idState = resultSet.getInt("idState");
+                boolean isDelete = resultSet.getBoolean("isDelete");
+                boolean isBan = resultSet.getBoolean("isBan");
+                int idRole = resultSet.getInt("idRole");
+                float priceAccount = resultSet.getFloat("priceAccount");
+                Date timeCreate = resultSet.getDate("timeCreate");
+   	    	 	String nameRole = resultSet.getString("nameRole");
+
+		        Account account = new Account(idAccount, userName, userPassword, email, fistName, lastName, idCountry, idState,
+                        isDelete, isBan, idRole, priceAccount, timeCreate,nameRole);
+		        list.add(account);
+		    }
+		    return list;
+		}
+		
 		
 		public static Account findUser(Connection conn, String userName) throws SQLException {
 	        String sql = "SELECT * FROM Account WHERE userName = ?";
